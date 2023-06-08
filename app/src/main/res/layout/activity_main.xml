@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/User"
+        android:layout_width="320dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:backgroundTint="@color/win8_magenta"
+        android:onClick="userClicked"
+        android:text="Log in"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_person"
+        app:iconGravity="start"
+        app:iconPadding="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/Adds"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:backgroundTint="@color/win8_blue"
+        android:onClick="addinsClicked"
+        android:text="Add-ins"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_game_extension"
+        app:iconGravity="top"
+        app:iconPadding="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/Sync"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/Games"
+        app:layout_constraintTop_toBottomOf="@+id/lastSyncView" />
+
+    <Button
+        android:id="@+id/Games"
+        android:layout_width="150dp"
+        android:layout_height="200dp"
+        android:backgroundTint="@color/win8_green"
+        android:onClick="gamesClicked"
+        android:text="Games"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_cards"
+        app:iconGravity="top"
+        app:iconPadding="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/Sync"
+        app:layout_constraintEnd_toStartOf="@+id/Adds"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lastSyncView"
+        app:layout_constraintVertical_bias="0.502" />
+
+    <Button
+        android:id="@+id/Sync"
+        android:layout_width="318dp"
+        android:layout_height="111dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/win8_orange"
+        android:onClick="syncClicked"
+        android:text="Synchronize"
+        android:textSize="16sp"
+        app:icon="@drawable/ic_sync"
+        app:iconGravity="start"
+        app:iconPadding="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/addinsNumberView"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="5dp"
+        android:text="Number of owned add-ins: "
+        app:layout_constraintStart_toStartOf="@+id/gamesNumberView"
+        app:layout_constraintTop_toBottomOf="@+id/gamesNumberView" />
+
+    <TextView
+        android:id="@+id/lastSyncView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Last synchronized:"
+        app:layout_constraintStart_toStartOf="@+id/addinsNumberView"
+        app:layout_constraintTop_toBottomOf="@+id/addinsNumberView" />
+
+    <TextView
+        android:id="@+id/gamesNumberView"
+        android:layout_width="wrap_content"
+        android:layout_height="19dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="5dp"
+        android:text="Number of owned games:"
+        app:layout_constraintBottom_toTopOf="@+id/addinsNumberView"
+        app:layout_constraintStart_toStartOf="@+id/User"
+        app:layout_constraintTop_toBottomOf="@+id/User" />
+
+    <Button
+        android:id="@+id/logOut"
+        android:layout_width="98dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#673AB7"
+        android:onClick="logOutClicked"
+        android:text="Log out"
+        app:layout_constraintBottom_toBottomOf="@+id/lastSyncView"
+        app:layout_constraintEnd_toEndOf="@+id/User"
+        app:layout_constraintTop_toTopOf="@+id/gamesNumberView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
